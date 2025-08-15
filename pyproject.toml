@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyter_remote_kernel"
+version = "2.6.2"
+description = "Remote Jupyter Kernel Launcher with SSH port forwarding"
+authors = [{ name = "Leo", email = "leoustc@icloud.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "paramiko>=3.4.0",
+    "sshtunnel>=0.4.0",
+    "pydantic",
+]
+
+[project.scripts]
+remote_kernel = "remote_kernel.core:main"
+rkernel = "remote_kernel.core:main"
+
